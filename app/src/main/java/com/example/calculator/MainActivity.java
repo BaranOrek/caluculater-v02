@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     //TextView resultBar = findViewById(R.id.resultText);
@@ -74,9 +75,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int textlength = controlBar.length();
-                if (textlength == 0) {
+                if (textlength == 0 && !resultBar.getText().toString().isEmpty()) {
                     controlBar.setText("0");
-                } else if (textlength < 20) {
+                    resultBar.setText(null);
+                } else if (textlength ==0) {
+                    controlBar.append("0");
+                }else if (textlength < 20) {
                     controlBar.append("0");
                 }
                 minusBtn.setEnabled(true);
@@ -91,9 +95,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int textlength = controlBar.length();
-                if (textlength == 0) {
+                if (textlength == 0 && !resultBar.getText().toString().isEmpty()) {
                     controlBar.setText("1");
-                } else if (textlength < 20) {
+                    resultBar.setText(null);
+                } else if (textlength ==0) {
+                    controlBar.append("1");
+                }else if (textlength < 20) {
                     controlBar.append("1");
                 }
                 minusBtn.setEnabled(true);
@@ -108,9 +115,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int textlength = controlBar.length();
-                if (textlength == 0) {
+                if (textlength == 0 && !resultBar.getText().toString().isEmpty()) {
                     controlBar.setText("2");
-                } else if (textlength < 20) {
+                    resultBar.setText(null);
+                } else if (textlength ==0) {
+                    controlBar.append("2");
+                }else if (textlength < 20) {
                     controlBar.append("2");
                 }
                 minusBtn.setEnabled(true);
@@ -125,9 +135,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int textlength = controlBar.length();
-                if (textlength == 0) {
+                if (textlength == 0 && !resultBar.getText().toString().isEmpty()) {
                     controlBar.setText("3");
-                } else if (textlength < 20) {
+                    resultBar.setText(null);
+                } else if (textlength ==0) {
+                    controlBar.append("3");
+                }else if (textlength < 20) {
                     controlBar.append("3");
                 }
                 minusBtn.setEnabled(true);
@@ -142,9 +155,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int textlength = controlBar.length();
-                if (textlength == 0) {
+                if (textlength == 0 && !resultBar.getText().toString().isEmpty()) {
                     controlBar.setText("4");
-                } else if (textlength < 20) {
+                    resultBar.setText(null);
+                } else if (textlength ==0) {
+                    controlBar.append("4");
+                }else if (textlength < 20) {
                     controlBar.append("4");
                 }
                 minusBtn.setEnabled(true);
@@ -159,9 +175,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int textlength = controlBar.length();
-                if (textlength == 0) {
+                if (textlength == 0 && !resultBar.getText().toString().isEmpty()) {
                     controlBar.setText("5");
-                } else if (textlength < 20) {
+                    resultBar.setText(null);
+                } else if (textlength ==0) {
+                    controlBar.append("5");
+                }else if (textlength < 20) {
                     controlBar.append("5");
                 }
                 minusBtn.setEnabled(true);
@@ -176,9 +195,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int textlength = controlBar.length();
-                if (textlength == 0) {
+                if (textlength == 0 && !resultBar.getText().toString().isEmpty()) {
                     controlBar.setText("6");
-                } else if (textlength < 20) {
+                    resultBar.setText(null);
+                } else if (textlength ==0) {
+                    controlBar.append("6");
+                }else if (textlength < 20) {
                     controlBar.append("6");
                 }
                 minusBtn.setEnabled(true);
@@ -193,9 +215,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int textlength = controlBar.length();
-                if (textlength == 0) {
+                if (textlength == 0 && !resultBar.getText().toString().isEmpty()) {
                     controlBar.setText("7");
-                } else if (textlength < 20) {
+                    resultBar.setText(null);
+                } else if (textlength ==0) {
+                    controlBar.append("7");
+                }else if (textlength < 20) {
                     controlBar.append("7");
                 }
                 minusBtn.setEnabled(true);
@@ -210,9 +235,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int textlength = controlBar.length();
-                if (textlength == 0) {
+                if (textlength == 0 && !resultBar.getText().toString().isEmpty()) {
                     controlBar.setText("8");
-                } else if (textlength < 20) {
+                    resultBar.setText(null);
+                } else if (textlength ==0) {
+                    controlBar.append("8");
+                }else if (textlength < 20) {
                     controlBar.append("8");
                 }
                 minusBtn.setEnabled(true);
@@ -227,9 +255,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int textlength = controlBar.length();
-                if (textlength == 0) {
+                if (textlength == 0 && !resultBar.getText().toString().isEmpty()) {
                     controlBar.setText("9");
-                } else if (textlength < 20) {
+                    resultBar.setText(null);
+                } else if (textlength ==0) {
+                    controlBar.append("9");
+                }else if (textlength < 20) {
                     controlBar.append("9");
                 }
                 minusBtn.setEnabled(true);
@@ -274,10 +305,9 @@ public class MainActivity extends AppCompatActivity {
 
                             case 1:
                                 value3 = Double.parseDouble(controlBar.getText().toString().subSequence(1, controlBar.length()).toString());
-                                resultBar.append("x" + value3 + ")");
                                 value2 *= value3;
                                 value1 += value2;
-                                resultBar.append("=" + value1);
+                                resultBar.setText(value1.toString());
                                 controlBar.setText(null);
                                 Log.i("aaa", value1.toString());
                                 operation = 0;
@@ -285,24 +315,28 @@ public class MainActivity extends AppCompatActivity {
 
                             case 2:
                                 value3 = Double.parseDouble(controlBar.getText().toString().subSequence(1, controlBar.length()).toString());
-                                resultBar.append("x" + value3 + ")");
                                 value2 *= value3;
                                 value1 -= value2;
-                                resultBar.append("=" + value1);
+                                resultBar.setText(value1.toString());
                                 Log.i("aaa", value1.toString());
                                 controlBar.setText(null);
                                 operation = 0;
                                 break;
                             case 3:
                                 value3 = Double.parseDouble(controlBar.getText().toString().subSequence(1, controlBar.length()).toString());
-                                resultBar.append("x" + value3 + ")");
                                 value2 *= value3;
                                 value1 = value2;
-                                resultBar.append("=" + value1);
+                                resultBar.setText(value1.toString());
                                 controlBar.setText(null);
                                 Log.i("aaa", value1.toString());
                                 operation = 0;
                                 break;
+                            case 4:
+                                value2 = Double.parseDouble(controlBar.getText().toString().subSequence(1, controlBar.length()).toString());
+                                value1 *= value2;
+                                resultBar.setText(value1.toString());
+                                controlBar.setText(null);
+                                operation = 0;
                         }
 
                     } else if (controlBar.getText().toString().contains("/")) {
@@ -311,10 +345,9 @@ public class MainActivity extends AppCompatActivity {
 
                             case 1:
                                 value3 = Double.parseDouble(controlBar.getText().toString().subSequence(1, controlBar.length()).toString());
-                                resultBar.append("x" + value3 + ")");
                                 value2 /= value3;
                                 value1 += value2;
-                                resultBar.append("=" + value1);
+                                resultBar.setText(value1.toString());
                                 controlBar.setText(null);
                                 Log.i("aaa", value1.toString());
                                 operation = 0;
@@ -322,45 +355,49 @@ public class MainActivity extends AppCompatActivity {
 
                             case 2:
                                 value3 = Double.parseDouble(controlBar.getText().toString().subSequence(1, controlBar.length()).toString());
-                                resultBar.append("/" + value3 + ")");
                                 value2 /= value3;
                                 value1 += value2;
-                                resultBar.append("=" + value1);
+                                resultBar.setText(value1.toString());
                                 controlBar.setText(null);
                                 Log.i("aaa", value1.toString());
                                 operation = 0;
                                 break;
+
                             case 3:
                                 value3 = Double.parseDouble(controlBar.getText().toString().subSequence(1, controlBar.length()).toString());
-                                resultBar.append("/" + value3 + ")");
                                 value2 /= value3;
                                 value1 = value2;
-                                resultBar.append("=" + value1);
+                                resultBar.setText(value1.toString());
                                 controlBar.setText(null);
                                 Log.i("aaa", value1.toString());
                                 operation = 0;
                                 break;
+
+                            case 4:
+                                value2 = Double.parseDouble(controlBar.getText().toString().subSequence(1, controlBar.length()).toString());
+                                value1 /= value2;
+                                resultBar.setText(value1.toString());
+                                controlBar.setText(null);
+                                operation = 0;
                         }
 
                     } else if (controlBar.getText().toString().contains("+") && controlBar.getText().toString().contains("-")) {
                         if (textlength == 2) {
-                            resultBar.append("=" + value1);
+                            resultBar.setText(value1.toString());
                         } else if (textlength > 2) {
                             value2 = Double.parseDouble(controlBar.getText().subSequence(1, textlength).toString());
-                            resultBar.append("+" + "(" + value2.toString() + ")");
                             value1 += value2;
-                            resultBar.append("=" + value1.toString());
+                            resultBar.setText(value1.toString());
                             controlBar.setText(null);
                         }
                     } else if (controlBar.getText().toString().contains("+")) {
                         if (textlength == 1) {
-                            resultBar.append("=" + value1);
+                            resultBar.setText(value1.toString());
                             controlBar.setText(null);
                         } else if (textlength > 1) {
                             value2 = Double.parseDouble(controlBar.getText().subSequence(1, textlength).toString());
-                            resultBar.append("+" + value2.toString());
                             value1 += value2;
-                            resultBar.append("=" + value1.toString());
+                            resultBar.setText(value1.toString());
                             controlBar.setText(null);
                         }
                     } else if (controlBar.getText().toString().contains("-") && textlength == 2) {
@@ -369,24 +406,22 @@ public class MainActivity extends AppCompatActivity {
                         currentText = controlBar.getText();
                         controlBar.setText(currentText.subSequence(0, currentText.length() - 1));
                         if (valueCheck < 0) {
-                            resultBar.append("=" + value1);
+                            resultBar.setText(value1.toString());
                             controlBar.setText(null);
                         } else {
                             value2 = Double.parseDouble(controlBar.getText().subSequence(1, textlength).toString());
-                            resultBar.append("-" + "(" + value2.toString() + ")");
                             value1 -= value2;
-                            resultBar.append("=" + value1.toString());
+                            resultBar.setText(value1.toString());
                             controlBar.setText(null);
                         }
 
                     } else if (controlBar.getText().toString().contains("-") && textlength == 1) {
-                        resultBar.append("=" + value1);
+                        resultBar.setText(value1.toString());
                         controlBar.setText(null);
                     } else if (controlBar.getText().toString().contains("-")) {
                         value2 = Double.parseDouble(controlBar.getText().subSequence(1, textlength).toString());
-                        resultBar.append("-" + "(" + value2.toString() + ")");
                         value1 -= value2;
-                        resultBar.append("=" + value1.toString());
+                        resultBar.setText(value1.toString());
                         controlBar.setText(null);
                     }
 
@@ -449,6 +484,13 @@ public class MainActivity extends AppCompatActivity {
                                 Log.i("aaa", value1.toString());
                                 operation = 0;
                                 break;
+
+                            case 4:
+                                value2 = Double.parseDouble(controlBar.getText().toString().subSequence(1, controlBar.length()).toString());
+                                value1 *= value2;
+                                resultBar.setText(value1.toString());
+                                controlBar.setText(null);
+                                operation = 0;
                         }
 
                     } else if (controlBar.getText().toString().contains("/")) {
@@ -484,6 +526,13 @@ public class MainActivity extends AppCompatActivity {
                                 Log.i("aaa", value1.toString());
                                 operation = 0;
                                 break;
+
+                            case 4:
+                                value2 = Double.parseDouble(controlBar.getText().toString().subSequence(1, controlBar.length()).toString());
+                                value1 /= value2;
+                                resultBar.setText(value1.toString());
+                                controlBar.setText(null);
+                                operation = 0;
                         }
 
                     } else if (!resultBar.getText().toString().isEmpty() && controlBar.getText().toString().contains("+")) {
@@ -556,6 +605,13 @@ public class MainActivity extends AppCompatActivity {
                                 Log.i("aaa", value1.toString());
                                 operation = 0;
                                 break;
+
+                            case 4:
+                                value2 = Double.parseDouble(controlBar.getText().toString().subSequence(1, controlBar.length()).toString());
+                                value1 *= value2;
+                                resultBar.setText(value1.toString());
+                                controlBar.setText(null);
+                                operation = 0;
                         }
 
                     } else if (controlBar.getText().toString().contains("/")) {
@@ -591,6 +647,13 @@ public class MainActivity extends AppCompatActivity {
                                 Log.i("aaa", value1.toString());
                                 operation = 0;
                                 break;
+
+                            case 4:
+                                value2 = Double.parseDouble(controlBar.getText().toString().subSequence(1, controlBar.length()).toString());
+                                value1 /= value2;
+                                resultBar.setText(value1.toString());
+                                controlBar.setText(null);
+                                operation = 0;
                         }
 
                     } else if (!resultBar.getText().toString().isEmpty() && controlBar.getText().toString().contains("-")
@@ -633,7 +696,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int textlength = controlBar.length();
-                if (textlength == 0) {
+                if (textlength == 0 && !resultBar.getText().toString().isEmpty()){
+                    resultBar.setText(value1.toString());
+                    controlBar.setText("x");
+                    operation = 4;
+                }else if (textlength == 0){
                     controlBar.setText(null);
                 } else if (textlength < 20) {
                     if (resultBar.getText().toString().isEmpty()) {
@@ -641,7 +708,7 @@ public class MainActivity extends AppCompatActivity {
                         controlBar.setText("x");
                         resultBar.setText("(" + value2.toString());
                         operation = 3;
-                    } else if (!resultBar.getText().toString().isEmpty()) {
+                    }  else if (!resultBar.getText().toString().isEmpty()) {
 
                         if (controlBar.getText().toString().contains("x")) {
 
@@ -693,7 +760,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int textlength = controlBar.length();
-                if (textlength == 0) {
+                if (textlength == 0 && !resultBar.getText().toString().isEmpty()){
+                    Log.i("bububu" , "klklklk");
+                    resultBar.setText(value1.toString());
+                    controlBar.setText("/");
+                    operation = 4;
+                }else if (textlength == 0){
                     controlBar.setText(null);
                 } else if (textlength < 20) {
                     if (resultBar.getText().toString().isEmpty()) {
